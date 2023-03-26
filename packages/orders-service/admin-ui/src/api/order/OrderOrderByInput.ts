@@ -7,6 +7,7 @@ export type OrderOrderByInput = {
   id?: SortOrder;
   productId?: SortOrder;
   quantity?: SortOrder;
+  toNotify?: SortOrder;
   totalPrice?: SortOrder;
   updatedAt?: SortOrder;
 };
