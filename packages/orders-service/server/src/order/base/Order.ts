@@ -18,6 +18,7 @@ import {
   IsNumber,
   IsString,
   IsInt,
+  IsBoolean,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Customer } from "../../customer/base/Customer";
@@ -80,6 +81,17 @@ class Order {
     nullable: true,
   })
   quantity!: number | null;
+
+  @ApiProperty({
+    required: false,
+    type: Boolean,
+  })
+  @IsBoolean()
+  @IsOptional()
+  @Field(() => Boolean, {
+    nullable: true,
+  })
+  toNotify!: boolean | null;
 
   @ApiProperty({
     required: false,

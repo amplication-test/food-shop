@@ -9,6 +9,7 @@ import {
   ReferenceManyField,
   Datagrid,
   ReferenceField,
+  BooleanField,
 } from "react-admin";
 
 import { CUSTOMER_TITLE_FIELD } from "../customer/CustomerTitle";
@@ -44,6 +45,7 @@ export const ProductShow = (props: ShowProps): React.ReactElement => {
               <TextField source={PRODUCT_TITLE_FIELD} />
             </ReferenceField>
             <TextField label="Quantity" source="quantity" />
+            <BooleanField label="toNotify" source="toNotify" />
             <TextField label="Total Price" source="totalPrice" />
             <DateField source="updatedAt" label="Updated At" />
           </Datagrid>

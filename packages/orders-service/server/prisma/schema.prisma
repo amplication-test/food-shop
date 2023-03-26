@@ -27,6 +27,7 @@ model Order {
   product    Product?  @relation(fields: [productId], references: [id])
   productId  String?
   quantity   Int?
+  toNotify   Boolean?
   totalPrice Int?
   updatedAt  DateTime  @updatedAt
 }
