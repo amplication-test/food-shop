@@ -58,6 +58,17 @@ class Customer {
   firstName!: string | null;
 
   @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  g!: string | null;
+
+  @ApiProperty({
     required: true,
     type: String,
   })
@@ -75,6 +86,17 @@ class Customer {
     nullable: true,
   })
   lastName!: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  ofek!: string | null;
 
   @ApiProperty({
     required: false,

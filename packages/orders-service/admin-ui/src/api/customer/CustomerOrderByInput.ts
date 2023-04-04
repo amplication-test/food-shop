@@ -5,8 +5,10 @@ export type CustomerOrderByInput = {
   createdAt?: SortOrder;
   email?: SortOrder;
   firstName?: SortOrder;
+  g?: SortOrder;
   id?: SortOrder;
   lastName?: SortOrder;
+  ofek?: SortOrder;
   phone?: SortOrder;
   updatedAt?: SortOrder;
 };

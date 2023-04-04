@@ -38,8 +38,10 @@ model Customer {
   createdAt DateTime @default(now())
   email     String?
   firstName String?
+  g         String?
   id        String   @id @default(cuid())
   lastName  String?
+  ofek      String?
   orders    Order[]
   phone     String?
   updatedAt DateTime @updatedAt
